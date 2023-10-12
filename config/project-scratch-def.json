@@ -1,13 +1,26 @@
 {
-  "orgName": "Demo company",
+  "orgName": "Total BOT",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": ["EnableSetPasswordInApi","PersonAccounts","Communities", "B2BCommerce", "Chatbot","SalesUser","ServiceCloud","ServiceUser"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
+    },
+    "experienceBundleSettings": {
+        "enableExperienceBundleMetadata": true
+    },
+    "communitiesSettings": {
+        "enableNetworksEnabled": true,
+        "enableOotbProfExtUserOpsEnable": true
+    },
+    "commerceSettings": {
+      "commerceEnabled": true
+    },
+    "omniChannelSettings": {
+      "enableOmniChannel": true
     }
   }
 }
