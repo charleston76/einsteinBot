@@ -3,6 +3,12 @@
   "edition": "Developer",
   "features": ["EnableSetPasswordInApi","PersonAccounts","Communities", "B2BCommerce", "Chatbot","SalesUser","ServiceCloud","ServiceUser"],
   "settings": {
+    "liveAgentSettings": {
+      "enableLiveAgent": true
+     },
+     "botSettings": {
+       "enableBots": true
+     },
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
