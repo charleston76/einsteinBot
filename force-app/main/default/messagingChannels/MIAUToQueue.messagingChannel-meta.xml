@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>MIAU to Queue</masterLabel>
+    <messagingChannelType>EmbeddedMessaging</messagingChannelType>
+    <sessionHandlerFlow>MIAWToQueue</sessionHandlerFlow>
+    <sessionHandlerQueue>FallbackQueue</sessionHandlerQueue>
+    <sessionHandlerType>Flow</sessionHandlerType>
+</MessagingChannel>

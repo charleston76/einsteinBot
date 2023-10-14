@@ -1,7 +1,7 @@
 {
   "orgName": "Total BOT",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi","PersonAccounts","Communities", "B2BCommerce", "Chatbot","SalesUser","ServiceCloud","ServiceUser"],
+  "features": ["EnableSetPasswordInApi","PersonAccounts","Communities", "B2BCommerce", "Chatbot","SalesUser","ServiceCloud","ServiceUser","LiveMessage","LiveAgent"],
   "settings": {
     "liveAgentSettings": {
       "enableLiveAgent": true
