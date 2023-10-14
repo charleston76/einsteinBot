@@ -7,14 +7,13 @@ To make our lives easy, we can automate many things, putting the Salesforce CLI,
 
     ./scripts/bash/createScratchOrg.sh tmpBot
 
-## My cookbook
+## My MIAW cookbook
 
 Based on the official salesforce [Einstein Bots Developer Cookbook](https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/bot_cookbook.pdf), I have created this one.
 
 But here, besides we have the bot feature, I'm also will show you [What’s Messaging for In-App and Web](https://help.salesforce.com/s/articleView?id=sf.reimagine_miaw.htm&type=5) and the necessary things, to have that working.
 
-
-Starting understanding were I get this ideas from the free official salesforce material:
+Let's start understanding were I got this ideas? Sure, from the free official salesforce material!
 * [Digital Engagement](https://help.salesforce.com/s/articleView?id=sf.sales_core_digital_engagment.htm&type=5) is the big picture;
 
 You need to understand a little bit about [Messaging in Service Cloud](https://help.salesforce.com/s/articleView?id=sf.livemessage_intro.htm&type=5) and what would be the "Messaging for In-App and Web" aka [MIAW](https://help.salesforce.com/s/articleView?id=sf.reimagine_miaw.htm&type=5), and mainly [how to Set Up Messaging for In-App and Web](https://help.salesforce.com/s/articleView?id=sf.miaw_setup_stages.htm&type=5)
@@ -26,7 +25,7 @@ You need to understand a little bit about [Messaging in Service Cloud](https://h
     After that, assign the permission to the user if you are using a CLI approach
 
     sfdx force:user:permset:assign --perm-set-name MIAWPermissionSet --target-org tmpBot
-1. [Create a Presence Status for messaging](https://help.salesforce.com/s/articleView?id=sf.service_presence_create_presence_status.htm&type=5clear)
+1. Create a the following [Presence Status for messaging](https://help.salesforce.com/s/articleView?id=sf.service_presence_create_presence_status.htm&type=5clear)
     1. Chat
     1. Messaging
     1. Chat & Messaging
@@ -44,7 +43,6 @@ You need to understand a little bit about [Messaging in Service Cloud](https://h
 
     sfdx force:user:permset:assign --perm-set-name MIAWAgentsPermissionSet --target-org tmpBot
 
-
 ### Org preparation
 
 Many features works together, so you need to [Prepare a Salesforce Org for Messaging for In-App and Web](https://help.salesforce.com/s/articleView?id=sf.miaw_prepare_org_1.htm&type=5)
@@ -52,8 +50,8 @@ Many features works together, so you need to [Prepare a Salesforce Org for Messa
 
 1. [Enable Omni-Channel](https://help.salesforce.com/s/articleView?id=sf.omnichannel_enable.htm&type=5)
 1. [Create the Service Channel for messaging](https://help.salesforce.com/s/articleView?id=sf.service_presence_create_service_channel.htm&type=5)
-1. Create the the MIAW Queue (and a "Fallback Queue") following this [Queues guidance](https://help.salesforce.com/s/articleView?id=sf.setting_up_queues.htm&type=5)
-1. Create an Omni Flow, but after you set up your Pre-Chat Form, return to this flow to map pre-chat fields to your messaging channel.
+1. Create the the **MIAW Queue** (and a **Fallback Queue**) following this [Queues guidance](https://help.salesforce.com/s/articleView?id=sf.setting_up_queues.htm&type=5)
+1. Create an Omni Flow, but if you set up your Pre-Chat Form, return to this flow to map pre-chat fields to your messaging channel.
     1. From Setup, in the Quick Find box, enter Flows, and select Flows.
     1. Create a New Flow.
     1. In the All + Templates tab, select Omni-Channel Flow.
@@ -86,6 +84,47 @@ Many features works together, so you need to [Prepare a Salesforce Org for Messa
     1. On the next screen, Select CLONE SALESFORCE DEFAULT PAGE and finish.
     1. When you’re inside the app builder, add the Enhanced Conversation component to the page.
     1. Activate the page.
+
+### Einstein Bot configuration
+
+So, now, let's create the Einstein Bot.
+This activation add the **sfdc.chatbot.service.permset** permission set  to your org, and here you can grant access to Apex classes, objects and enable access to flows from the Run Flows checkbox in the System Permissions section.
+
+
+1. From Setup, use the Quick Find box to find Einstein Bots. 
+1. Enable Einstein Bots.
+1. Click New on the Einstein Bots setup page (let's create the **MIAW Bot**).
+1. After filling up other information, when you arrives at "Route bot conversations with Omni-Channel Flow", add the flow you have created before;
+1. Clicking on **Proceed** button, the setup will create or adjust:
+    * [Custom Dialogs](https://help.salesforce.com/s/articleView?id=sf.bots_service_dialog_about.htm&type=5) for the Welcome message and Main Menu
+    * [System Dialogs](https://help.salesforce.com/s/articleView?id=sf.bots_service_system_bot_dialog.htm&type=5) for commonly-used actions like agent escalations
+    * Bot Analytics to help measure performance
+    * Omni-Channel Flow for routing conversations
+1. Click **Finish**.
+1. To activate your bot, click Activate.
+
+<!-- We'll not activate this bot now, but we'll get back here later... -->
+
+### Routing to the Bot
+
+At this point, the setup have created another "Route to MIAW Bot" flow (following the name we have used in this cookbook), that will route the arriving chats to this bot.
+
+But any way, you need to change this flow, adding a real queue there and activating it.
+In this example, I did the same done on the "MIAW to Queue" flow, read the queue name from the configuration.
+
+### Preview the bot
+
+No cookbook eu parei depois da pagina 5 em:
+    To preview the bot from within the Bot Builder, add an Embedded Chat deployment.
+
+Parei aqui para fazer esse deployment
+To preview the bot from within the Bot Builder, add an [Embedded Chat](https://help.salesforce.com/s/articleView?id=sf.snapins_chat_setup.htm&type=5) deployment.
+
+1. Go to Embedded Service;
+1. Clicks on "New deployment"
+1. Select "Embedded Chat" and "Next"
+
+
 
 1. []()
 1. []()
