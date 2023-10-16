@@ -85,6 +85,20 @@ Many features works together, so you need to [Prepare a Salesforce Org for Messa
     1. When you’re inside the app builder, add the Enhanced Conversation component to the page.
     1. Activate the page.
 
+### Create a digital experience
+
+Yes, we'll not clear see that on the official cookbook, but you'll need that during the bot configuration, so... let's do that.
+
+You can do that out of the box... or execute the CLI:
+
+    Bash command:
+    sf community create --name 'Total Bot' --template-name 'Customer Service' --url-path-prefix totalbot --description 'The Total bot community'
+
+    Windows command:
+    sf community create --name "Total Bot" --template-name "Customer Service" --url-path-prefix totalbot --description "The Total bot community"
+
+After that, you'll still needing apply the necessary configurations like activation, publishing, etc, but that is it for now...
+
 ### Einstein Bot configuration
 
 So, now, let's create the Einstein Bot.
@@ -114,15 +128,14 @@ In this example, I did the same done on the "MIAW to Queue" flow, read the queue
 
 ### Preview the bot
 
-No cookbook eu parei depois da pagina 5 em:
-    To preview the bot from within the Bot Builder, add an Embedded Chat deployment.
-
-Parei aqui para fazer esse deployment
 To preview the bot from within the Bot Builder, add an [Embedded Chat](https://help.salesforce.com/s/articleView?id=sf.snapins_chat_setup.htm&type=5) deployment.
 
-1. Go to Embedded Service;
-1. Clicks on "New deployment"
-1. Select "Embedded Chat" and "Next"
+1. Go to [Embedded Service Deployments](https://help.salesforce.com/s/articleView?id=sf.snapins_create_deployment.htm&type=5);
+    1. Clicks on "New deployment"
+    1. Select "Embedded Chat" and "Next"
+    1. Name it as "Bot Preview" and select the digital experience created before and save;
+
+
 
 
 
