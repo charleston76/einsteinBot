@@ -23,11 +23,32 @@
     </botDialogs>
     <botDialogs>
         <botSteps>
+            <botStepConditions>
+                <leftOperandName>MessagingContact</leftOperandName>
+                <leftOperandType>ConversationVariable</leftOperandType>
+                <operatorType>IsNotSet</operatorType>
+            </botStepConditions>
+            <botSteps>
+                <botNavigation>
+                    <botNavigationLinks>
+                        <targetBotDialog>Messaging_Initialization</targetBotDialog>
+                    </botNavigationLinks>
+                    <type>Call</type>
+                </botNavigation>
+                <stepIdentifier>601e20ff-a29a-40db-8d43-7cdd4fa42ad3</stepIdentifier>
+                <type>Navigation</type>
+            </botSteps>
+            <conditionLogicType>And</conditionLogicType>
+            <stepIdentifier>b73dee42-0243-45e2-96c5-76002b1eeae1</stepIdentifier>
+            <type>Group</type>
+        </botSteps>
+        <botSteps>
             <botMessages>
-                <message>Hi, I&apos;m MIAW Bot, a digital assistant.</message>
-                <messageIdentifier>49d9b2f2-9ef9-4d60-ba65-aa4feb4f85ed</messageIdentifier>
+                <message>Hi, {!MessagingContact}!
+I&apos;m an Einstein Bot. How can I help you today?</message>
+                <messageIdentifier>74d4d210-469c-64bb-9158-860146b2494c</messageIdentifier>
             </botMessages>
-            <stepIdentifier>9dd3cbd8-20a4-4bb9-b0b3-b61cc6aadfbc</stepIdentifier>
+            <stepIdentifier>b206dd24-aaa3-4ccf-ac83-2d1aa0e534d3</stepIdentifier>
             <type>Message</type>
         </botSteps>
         <botSteps>
@@ -43,6 +64,8 @@
         <developerName>Welcome</developerName>
         <isPlaceholderDialog>false</isPlaceholderDialog>
         <label>Welcome</label>
+        <mlIntent>Welcome</mlIntent>
+        <mlIntentTrainingEnabled>false</mlIntentTrainingEnabled>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <botDialogs>
@@ -168,6 +191,40 @@
         <label>Error Handler</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botVariableOperation>
+                <botInvocation>
+                    <invocationActionName>MessagingContactData</invocationActionName>
+                    <invocationActionType>apex</invocationActionType>
+                    <invocationMappings>
+                        <parameterName>endUserID</parameterName>
+                        <type>Input</type>
+                        <variableName>EndUserId</variableName>
+                        <variableType>ContextVariable</variableType>
+                    </invocationMappings>
+                    <invocationMappings>
+                        <parameterName>sContactName</parameterName>
+                        <type>Output</type>
+                        <variableName>MessagingContact</variableName>
+                        <variableType>ConversationVariable</variableType>
+                    </invocationMappings>
+                </botInvocation>
+                <type>Set</type>
+                <variableOperationIdentifier>62affd62-8a96-408d-af78-a4e679c58111</variableOperationIdentifier>
+            </botVariableOperation>
+            <stepIdentifier>94d38203-311d-415e-80bb-cf7bd4e3ce29</stepIdentifier>
+            <type>VariableOperation</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>d5b203c8-ee91-4742-aea3-14806e763266</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Messaging_Initialization</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Messaging Initialization</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
     <conversationSystemDialogs>
         <dialog>Rich_Content_Error_Handling</dialog>
         <type>ErrorHandling</type>
@@ -176,6 +233,11 @@
         <dialog>No_Agent_Available</dialog>
         <type>TransferFailed</type>
     </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>MessagingContact</developerName>
+        <label>Messaging Contact</label>
+    </conversationVariables>
     <entryDialog>Welcome</entryDialog>
     <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
     <intentV3Enabled>false</intentV3Enabled>

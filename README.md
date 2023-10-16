@@ -131,9 +131,23 @@ In this example, I did the same done on the "MIAW to Queue" flow, read the queue
 To preview the bot from within the Bot Builder, add an [Embedded Chat](https://help.salesforce.com/s/articleView?id=sf.snapins_chat_setup.htm&type=5) deployment.
 
 1. Go to [Embedded Service Deployments](https://help.salesforce.com/s/articleView?id=sf.snapins_create_deployment.htm&type=5);
-    1. Clicks on "New deployment"
-    1. Select "Embedded Chat" and "Next"
-    1. Name it as "Bot Preview" and select the digital experience created before and save;
+1. Clicks on "New deployment"
+1. Select "Embedded Chat" and "Next"
+1. Name it as "Bot Preview" and select the digital experience created before and save;
+
+### Grab user information with apex
+
+We are using this simple "MessagingContactData" apex class, that you need to grant the bot access through the "Chatbot" permission set to use.
+
+1. Create a new bot dialog named "Messaging Initialization"
+1. Add an action at the top of the flow using the Apex action type;
+1. For the input, use the built-in variable [Context] End User Id.
+1. Create a new variable named MessagingContact;
+1. Return to the "Welcome" dialog and create a Call Dialog rule;
+1. Add a rule to the top of the “Welcome” dialog flow.
+1. Add Condition to the rule. 
+    1. Configure the condition so that MessagingContact is the variable name and that the operator is Is Not Set. 
+    1. Set the Rule Action to CallDialog and the Dialog Name to MessagingInitialization. 
 
 
 

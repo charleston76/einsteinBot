@@ -2,6 +2,10 @@
 <Bot xmlns="http://soap.sforce.com/2006/04/metadata">
     <botMlDomain>
         <label>MIAW Bot</label>
+        <mlIntents>
+            <developerName>Welcome</developerName>
+            <label>Welcome</label>
+        </mlIntents>
         <name>MIAW_Bot</name>
     </botMlDomain>
     <contextVariables>
