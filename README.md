@@ -7,6 +7,24 @@ To make our lives easy, we can automate many things, putting the Salesforce CLI,
 
     ./scripts/bash/createScratchOrg.sh tmpBot
 
+## Create a digital experience
+
+Yes, we'll not clear see that on the official cookbook, but you'll need that during the bot configuration, so... let's do that.
+
+You can do that out of the box... or execute the CLI:
+
+    Bash command:
+    sf community create --name 'Total Bot' --template-name 'Customer Service' --url-path-prefix totalbot --description 'The Total bot community'
+
+    Windows command:
+    sf community create --name "Total Bot" --template-name "Customer Service" --url-path-prefix totalbot --description "The Total bot community"
+
+After that, you'll still needing apply the necessary configurations like activation, publishing, etc, but that is it for now...
+
+And when the org and digital experience have been created, deploy the thing done before...
+
+    sf project deploy start --ignore-conflicts --manifest manifest/package.xml 
+
 ## My MIAW cookbook
 
 Based on the official salesforce [Einstein Bots Developer Cookbook](https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/bot_cookbook.pdf), I have created this one.
@@ -84,20 +102,6 @@ Many features works together, so you need to [Prepare a Salesforce Org for Messa
     1. On the next screen, Select CLONE SALESFORCE DEFAULT PAGE and finish.
     1. When you’re inside the app builder, add the Enhanced Conversation component to the page.
     1. Activate the page.
-
-### Create a digital experience
-
-Yes, we'll not clear see that on the official cookbook, but you'll need that during the bot configuration, so... let's do that.
-
-You can do that out of the box... or execute the CLI:
-
-    Bash command:
-    sf community create --name 'Total Bot' --template-name 'Customer Service' --url-path-prefix totalbot --description 'The Total bot community'
-
-    Windows command:
-    sf community create --name "Total Bot" --template-name "Customer Service" --url-path-prefix totalbot --description "The Total bot community"
-
-After that, you'll still needing apply the necessary configurations like activation, publishing, etc, but that is it for now...
 
 ### Einstein Bot configuration
 
@@ -210,6 +214,8 @@ Optimize Bot Flow with Embedded Chat
 [Set Up Messaging for In-App and Web](https://help.salesforce.com/s/articleView?id=sf.miaw_setup_stages.htm&type=5)
 [Messaging for In-App developer guide](https://developer.salesforce.com/docs/service/messaging-in-app/overview)
 [Configure a Messaging for In-App Deployment](https://help.salesforce.com/s/articleView?id=sf.miaw_deployment_mobile.htm&type=5)
+
+[Get Started with Messaging for Web](https://developer.salesforce.com/docs/service/messaging-web/guide/introduction.html)
 
 The bot get external access through the "Chat Buttons & Invitations", where you define the routing flow
 
