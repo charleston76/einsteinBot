@@ -201,10 +201,17 @@ Create a “Order Status”  question dialog, and add a "Question" on the main b
 After that, you can add a "response message" to the "Order Status" dialog.
 
 
+The end point is the same you see under "Chat Settings", but without the protocol.
 
+Optimize Bot Flow with Embedded Chat
 
+[Glossary](https://help.salesforce.com/s/articleView?id=sf.miaw_glossary.htm&type=5)
 
+[Set Up Messaging for In-App and Web](https://help.salesforce.com/s/articleView?id=sf.miaw_setup_stages.htm&type=5)
+[Messaging for In-App developer guide](https://developer.salesforce.com/docs/service/messaging-in-app/overview)
+[Configure a Messaging for In-App Deployment](https://help.salesforce.com/s/articleView?id=sf.miaw_deployment_mobile.htm&type=5)
 
+The bot get external access through the "Chat Buttons & Invitations", where you define the routing flow
 
 1. []()
 1. []()
