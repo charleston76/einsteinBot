@@ -6,6 +6,13 @@
             <developerName>Welcome</developerName>
             <label>Welcome</label>
         </mlIntents>
+        <mlSlotClasses>
+            <dataType>Text</dataType>
+            <developerName>OrderNumberString</developerName>
+            <extractionRegex>\bO\-\d{8}\b</extractionRegex>
+            <extractionType>Pattern</extractionType>
+            <label>OrderNumberString</label>
+        </mlSlotClasses>
         <name>MIAW_Bot</name>
     </botMlDomain>
     <contextVariables>

@@ -194,6 +194,14 @@ You can create some data on the BotOrder object using the code below
 
     insert BotOrderList;
 
+Let's query the data using a "OrderNumberString" (regular expression: \bO\-\d{8}\b) entity to understand the order pattern we have created above, and the "OrderNumber" variable.
+
+Create a “Order Status”  question dialog, and add a "Question" on the main body, setting the "OrderNumberString" as the "Expected response format" and the "OrderNumber" as the "Save Answer to Variable".
+
+After that, you can add a "response message" to the "Order Status" dialog.
+
+
+
 
 
 

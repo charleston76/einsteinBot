@@ -259,6 +259,70 @@ I&apos;m an Einstein Bot. How can I help you today?</message>
     <botDialogs>
         <botDialogGroup>Order</botDialogGroup>
         <botSteps>
+            <botVariableOperation>
+                <askCollectIfSet>false</askCollectIfSet>
+                <botMessages>
+                    <message>Ok, I can help you with that. What is the order number? Note that should start with the letter O, followed by a dash, and then end with 8 numbers.
+
+For example: &quot;O-12345678&quot;</message>
+                    <messageIdentifier>5c1e2fd5-7b78-13be-1717-73ec90f4f57d</messageIdentifier>
+                </botMessages>
+                <botVariableOperands>
+                    <disableAutoFill>true</disableAutoFill>
+                    <sourceName>OrderNumberString</sourceName>
+                    <sourceType>MlSlotClass</sourceType>
+                    <targetName>OrderNumber</targetName>
+                    <targetType>ConversationVariable</targetType>
+                </botVariableOperands>
+                <optionalCollect>false</optionalCollect>
+                <quickReplyWidgetType>Buttons</quickReplyWidgetType>
+                <type>Collect</type>
+                <variableOperationIdentifier>504d1be9-0ee3-5431-ba07-224cdbedb90a</variableOperationIdentifier>
+            </botVariableOperation>
+            <stepIdentifier>524de750-8edc-40ff-8a50-b48083eb1869</stepIdentifier>
+            <type>VariableOperation</type>
+        </botSteps>
+        <botSteps>
+            <botMessages>
+                <message>Sure, let me look up order {!OrderNumber} for you...</message>
+                <messageIdentifier>a89c1243-a765-2de9-5ad6-220e2613e69f</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>afc103d2-02f7-4729-9afc-20be893131ea</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botVariableOperation>
+                <botInvocation>
+                    <invocationActionName>GetOrderStatus</invocationActionName>
+                    <invocationActionType>apex</invocationActionType>
+                    <invocationMappings>
+                        <parameterName>sOrderNumber</parameterName>
+                        <type>Input</type>
+                        <variableName>OrderNumber</variableName>
+                        <variableType>ConversationVariable</variableType>
+                    </invocationMappings>
+                    <invocationMappings>
+                        <parameterName>sOrderStatus</parameterName>
+                        <type>Output</type>
+                        <variableName>OrderStatus</variableName>
+                        <variableType>ConversationVariable</variableType>
+                    </invocationMappings>
+                </botInvocation>
+                <type>Set</type>
+                <variableOperationIdentifier>fe77793b-3fde-44d4-af07-ff3fe3e7c41c</variableOperationIdentifier>
+            </botVariableOperation>
+            <stepIdentifier>e70f9a8b-d089-4504-8869-361ff4e583f9</stepIdentifier>
+            <type>VariableOperation</type>
+        </botSteps>
+        <botSteps>
+            <botMessages>
+                <message>The order number {!OrderNumber} has the following status: {!OrderStatus}</message>
+                <messageIdentifier>28648a63-167e-a9a0-29e8-5b41f53f41f8</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>20cc0064-9fd8-4701-923e-6d5fa4085f7a</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
             <stepIdentifier>9c9fef10-7ad7-4e93-9c6a-68c362a664da</stepIdentifier>
             <type>Wait</type>
         </botSteps>
@@ -301,6 +365,16 @@ I&apos;m an Einstein Bot. How can I help you today?</message>
         <dataType>Text</dataType>
         <developerName>MessagingContact</developerName>
         <label>Messaging Contact</label>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>OrderNumber</developerName>
+        <label>OrderNumber</label>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>OrderStatus</developerName>
+        <label>OrderStatus</label>
     </conversationVariables>
     <entryDialog>Welcome</entryDialog>
     <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
