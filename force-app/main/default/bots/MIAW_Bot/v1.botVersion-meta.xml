@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>v1</fullName>
+    <botDialogGroups>
+        <developerName>Order</developerName>
+        <label>Order</label>
+    </botDialogGroups>
     <botDialogs>
+        <botDialogGroup>Order</botDialogGroup>
         <botSteps>
+            <botNavigation>
+                <botNavigationLinks>
+                    <targetBotDialog>Order_Status</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
+                    <targetBotDialog>Return_an_Order</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
+                    <targetBotDialog>Cancel_an_Order</targetBotDialog>
+                </botNavigationLinks>
+                <type>Redirect</type>
+            </botNavigation>
             <stepIdentifier>08f16249-d093-4bce-82db-9bbb1725b00e</stepIdentifier>
-            <type>Wait</type>
+            <type>Navigation</type>
         </botSteps>
         <developerName>Order_Related</developerName>
         <isPlaceholderDialog>false</isPlaceholderDialog>
@@ -72,12 +89,16 @@ I&apos;m an Einstein Bot. How can I help you today?</message>
         <botSteps>
             <botNavigation>
                 <botNavigationLinks>
-                    <label>Order Related</label>
                     <targetBotDialog>Order_Related</targetBotDialog>
                 </botNavigationLinks>
                 <botNavigationLinks>
-                    <label>Appointment Related</label>
                     <targetBotDialog>Appointment_Related</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
+                    <targetBotDialog>Search_FAQ</targetBotDialog>
+                </botNavigationLinks>
+                <botNavigationLinks>
+                    <targetBotDialog>Transfer_To_Agent</targetBotDialog>
                 </botNavigationLinks>
                 <type>Redirect</type>
             </botNavigation>
@@ -223,6 +244,49 @@ I&apos;m an Einstein Bot. How can I help you today?</message>
         <developerName>Messaging_Initialization</developerName>
         <isPlaceholderDialog>false</isPlaceholderDialog>
         <label>Messaging Initialization</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <stepIdentifier>284186cf-4d93-42e2-90eb-724d3e983e66</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Search_FAQ</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>“Search FAQ</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>Order</botDialogGroup>
+        <botSteps>
+            <stepIdentifier>9c9fef10-7ad7-4e93-9c6a-68c362a664da</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Order_Status</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Order Status</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>Order</botDialogGroup>
+        <botSteps>
+            <stepIdentifier>0a5e8253-9909-4282-813a-af3a14a1e106</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Cancel_an_Order</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Cancel an Order</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botDialogGroup>Order</botDialogGroup>
+        <botSteps>
+            <stepIdentifier>52b92868-4956-4587-a257-679e6e9a027f</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Return_an_Order</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Return an Order</label>
         <showInFooterMenu>false</showInFooterMenu>
     </botDialogs>
     <conversationSystemDialogs>

@@ -150,6 +150,51 @@ We are using this simple "MessagingContactData" apex class, that you need to gra
     1. Set the Rule Action to CallDialog and the Dialog Name to MessagingInitialization. 
 
 
+### Asking things to the bot
+
+To question things....
+
+
+You can create some data on the BotOrder object using the code below
+
+<!-- SELECT Id, Name, Status__c, OrderDate__c, ContactId__c, Amount__c FROM BotOrder__c -->
+
+    List<String> orderListNumber = new List<String>{
+        'O-00123456',
+        'O-00123457',
+        'O-00123458',
+        'O-00123459',
+        'O-00123460'
+    };
+
+    List<BotOrder__c> BotOrderList = new List<BotOrder__c>();
+
+    String contactId = String.valueOf([
+        SELECT Id FROM Contact
+        LIMIT 1
+    ].Id);
+
+    system.debug('contactId ' + contactId);
+
+    Integer intCount = 100;
+
+    for (String orderMumber : orderListNumber){
+        Date thisDate = Date.Today() + intCount;
+        Decimal decAmount = 1000 + intCount;
+        BotOrderList.add(
+            new BotOrder__c (
+                Name = orderMumber, 
+                Status__c = 'New', 
+                OrderDate__c = thisDate, 
+                ContactId__c = contactId, 
+                Amount__c = decAmount
+            )
+        );
+    }
+
+    insert BotOrderList;
+
+
 
 
 
