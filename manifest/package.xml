@@ -14,6 +14,15 @@
         <name>ConnectedApp</name>
     </types>
     <types>
+        <members>https_service_force_com</members>
+        <name>CorsWhitelistOrigin</name>
+    </types>
+    <types>
+        <members>livePreview</members>
+        <members>scrtSite</members>
+        <name>CspTrustedSite</name>
+    </types>
+    <types>
         <members>BotOrder__c</members>
         <name>CustomObject</name>
     </types>
