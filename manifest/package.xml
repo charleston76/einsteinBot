@@ -22,7 +22,7 @@
         <name>CustomTab</name>
     </types>
     <types>
-        <members>Bot_Preview</members>
+        <members>MIAW_POC</members>
         <name>EmbeddedServiceConfig</name>
     </types>
     <types>
@@ -41,6 +41,10 @@
     <types>
         <members>MIAWPoc</members>
         <name>MessagingChannel</name>
+    </types>
+    <types>
+        <members>Supervisor_Test</members>
+        <name>OmniSupervisorConfig</name>
     </types>
     <types>
         <members>MIAWAgentsPermissionSet</members>

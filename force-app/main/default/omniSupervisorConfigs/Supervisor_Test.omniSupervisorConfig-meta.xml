@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OmniSupervisorConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isTimelineHidden>false</isTimelineHidden>
+    <masterLabel>Supervisor Test</masterLabel>
+    <omniSupervisorConfigAction>
+        <actionName>ChangeQueues</actionName>
+        <actionTab>AllAgents</actionTab>
+        <displayOrder>0</displayOrder>
+    </omniSupervisorConfigAction>
+    <omniSupervisorConfigAction>
+        <actionName>ChangeSkills</actionName>
+        <actionTab>AllAgents</actionTab>
+        <displayOrder>1</displayOrder>
+    </omniSupervisorConfigAction>
+    <omniSupervisorConfigProfile>
+        <profile>admin</profile>
+    </omniSupervisorConfigProfile>
+    <omniSupervisorConfigQueue>
+        <queue>FallbackQueue</queue>
+    </omniSupervisorConfigQueue>
+    <omniSupervisorConfigQueue>
+        <queue>MIAWQueue</queue>
+    </omniSupervisorConfigQueue>
+    <skillVisibility>AllSkills</skillVisibility>
+</OmniSupervisorConfig>

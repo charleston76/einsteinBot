@@ -268,6 +268,12 @@ Optimize Bot Flow with Embedded Chat
 [Get Started with Einstein Bots API](https://developer.salesforce.com/docs/service/einstein-bot-api/guide/prerequisites.html)
     [Introducing the Einstein Bots Platform API](https://developer.salesforce.com/blogs/2022/05/introducing-the-einstein-bots-platform-api)
 
+
+[Create Customer Flows for Messaging for In-App and Web](https://help.salesforce.com/s/articleView?id=sf.miaw_custom_field_example.htm&type=5)
+[Persist Pre-Chat Inputs Across Messaging Sessions](https://help.salesforce.com/s/articleView?id=sf.miaw_handle_sessions.htm&type=5)
+[Map Pre-Chat Values in Omni-Channel Flow](https://help.salesforce.com/s/articleView?id=sf.miaw_map_messaging_2.htm&type=5)
+[Configure a Messaging for Web Deployment in an Experience Builder or Commerce Cloud site](https://help.salesforce.com/s/articleView?id=sf.miaw_deployment_experience_builder.htm&type=5)
+
 The bot get external access through the "Chat Buttons & Invitations", where you define the routing flow
 
 1. []()

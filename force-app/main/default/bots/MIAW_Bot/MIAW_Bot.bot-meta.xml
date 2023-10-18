@@ -45,6 +45,7 @@
         <developerName>RoutableId</developerName>
         <label>Routable Id</label>
     </contextVariables>
+    <defaultOutboundFlow>MIAWToQueue</defaultOutboundFlow>
     <description>A bot from scratch.</description>
     <label>MIAW Bot</label>
     <logPrivateConversationData>false</logPrivateConversationData>
