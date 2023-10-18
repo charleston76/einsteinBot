@@ -7,7 +7,7 @@ To make our lives easy, we can automate many things, putting the Salesforce CLI,
 
     ./scripts/bash/createScratchOrg.sh tmpBot
 
-## Create a digital experience
+### Create a digital experience
 
 Yes, we'll not clear see that on the official cookbook, but you'll need that during the bot configuration, so... let's do that.
 
@@ -24,6 +24,54 @@ After that, you'll still needing apply the necessary configurations like activat
 And when the org and digital experience have been created, deploy the thing done before...
 
     sf project deploy start --ignore-conflicts --manifest manifest/package.xml 
+
+
+### Add some data 
+
+You can create some data on the BotOrder object using the code below.
+
+<!-- SELECT Id, Name, Status__c, OrderDate__c, ContactId__c, Amount__c FROM BotOrder__c -->
+
+    List<String> orderListNumber = new List<String>{
+        'O-00123456',
+        'O-00123457',
+        'O-00123458',
+        'O-00123459',
+        'O-00123460'
+    };
+
+    List<BotOrder__c> BotOrderList = new List<BotOrder__c>();
+
+    Contact newContact = new Contact(
+        FirstName = 'First',
+        LastName = 'Contact'
+    );
+
+    insert newContact;
+
+    String contactId = String.valueOf(newContact.Id);
+
+    system.debug('contactId ' + contactId);
+
+    Integer intCount = 100;
+
+    for (String orderMumber : orderListNumber){
+        Date thisDate = Date.Today() + intCount;
+        Decimal decAmount = 1000 + intCount;
+        BotOrderList.add(
+            new BotOrder__c (
+                Name = orderMumber, 
+                Status__c = 'New', 
+                OrderDate__c = thisDate, 
+                ContactId__c = contactId, 
+                Amount__c = decAmount
+            )
+        );
+    }
+
+    insert BotOrderList;
+
+
 
 ## My MIAW cookbook
 
@@ -59,7 +107,7 @@ You need to understand a little bit about [Messaging in Service Cloud](https://h
 
     After that, assign the permission to the user if you are using a CLI approach
 
-    sfdx force:user:permset:assign --perm-set-name MIAWAgentsPermissionSet --target-org tmpBot
+    sfdx force:user:permset:assign --perm-set-name MIAWAgentsPermissionSet --target-org tmpBotTwo
 
 ### Org preparation
 
@@ -216,6 +264,9 @@ Optimize Bot Flow with Embedded Chat
 [Configure a Messaging for In-App Deployment](https://help.salesforce.com/s/articleView?id=sf.miaw_deployment_mobile.htm&type=5)
 
 [Get Started with Messaging for Web](https://developer.salesforce.com/docs/service/messaging-web/guide/introduction.html)
+
+[Get Started with Einstein Bots API](https://developer.salesforce.com/docs/service/einstein-bot-api/guide/prerequisites.html)
+    [Introducing the Einstein Bots Platform API](https://developer.salesforce.com/blogs/2022/05/introducing-the-einstein-bots-platform-api)
 
 The bot get external access through the "Chat Buttons & Invitations", where you define the routing flow
 

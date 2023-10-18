@@ -309,7 +309,7 @@ For example: &quot;O-12345678&quot;</message>
                     </invocationMappings>
                 </botInvocation>
                 <type>Set</type>
-                <variableOperationIdentifier>fe77793b-3fde-44d4-af07-ff3fe3e7c41c</variableOperationIdentifier>
+                <variableOperationIdentifier>091b7f81-27c6-4088-8ea0-d849aec4dc65</variableOperationIdentifier>
             </botVariableOperation>
             <stepIdentifier>e70f9a8b-d089-4504-8869-361ff4e583f9</stepIdentifier>
             <type>VariableOperation</type>
@@ -323,8 +323,22 @@ For example: &quot;O-12345678&quot;</message>
             <type>Message</type>
         </botSteps>
         <botSteps>
+            <botMessages>
+                <message>Please select one option below:</message>
+                <messageIdentifier>50bde7e7-2e49-8909-e293-6e5984fe3bb8</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>04cf1050-5048-48c8-a6ec-37afbe20dc73</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <botNavigation>
+                <botNavigationLinks>
+                    <targetBotDialog>Main_Menu</targetBotDialog>
+                </botNavigationLinks>
+                <type>Redirect</type>
+            </botNavigation>
             <stepIdentifier>9c9fef10-7ad7-4e93-9c6a-68c362a664da</stepIdentifier>
-            <type>Wait</type>
+            <type>Navigation</type>
         </botSteps>
         <developerName>Order_Status</developerName>
         <isPlaceholderDialog>false</isPlaceholderDialog>

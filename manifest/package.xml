@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>MessagingContactData</members>
         <members>GetOrderStatus</members>
+        <members>MessagingContactData</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>MIAW_Bot</members>
         <name>Bot</name>
+    </types>
+    <types>
+        <members>MIAWConnectedPOC</members>
+        <name>ConnectedApp</name>
+    </types>
+    <types>
+        <members>BotOrder__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>BotOrder__c</members>
+        <name>CustomTab</name>
     </types>
     <types>
         <members>Bot_Preview</members>
@@ -21,6 +33,10 @@
         <members>MIAWToQueue</members>
         <members>Route_to_MIAW_Bot</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>BotOrder__c-Bot Order Layout</members>
+        <name>Layout</name>
     </types>
     <types>
         <members>MIAWPoc</members>
@@ -59,17 +75,5 @@
         <members>OmniChannel</members>
         <name>Settings</name>
     </types>
-	<types>
-		<members>BotOrder__c</members>
-		<name>CustomObject</name>
-	</types>
-	<types>
-		<members>*</members>
-		<name>CustomTab</name>
-	</types>
-	<types>
-		<members>BotOrder__c-Bot Order Layout</members>
-		<name>Layout</name>
-	</types>
     <version>58.0</version>
 </Package>
