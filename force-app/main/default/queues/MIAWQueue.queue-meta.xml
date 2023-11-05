@@ -3,6 +3,9 @@
     <doesSendEmailToMembers>false</doesSendEmailToMembers>
     <name>MIAW Queue</name>
     <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+    <queueSobject>
         <sobjectType>MessagingSession</sobjectType>
     </queueSobject>
 </Queue>

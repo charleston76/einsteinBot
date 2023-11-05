@@ -14,10 +14,10 @@ Yes, we'll not clear see that on the official cookbook, but you'll need that dur
 You can do that out of the box... or execute the CLI:
 
     Bash command:
-    sf community create --name 'Total Bot' --template-name 'Customer Service' --url-path-prefix totalbot --description 'The Total bot community'
+    sf community create --name 'MIAW Bot' --template-name 'Microsite (LWR)' --url-path-prefix miawbot --description 'The MIAW bot community'
 
     Windows command:
-    sf community create --name "Total Bot" --template-name "Customer Service" --url-path-prefix totalbot --description "The Total bot community"
+    sf community create --name "MIAW Bot" --template-name "Microsite (LWR)" --url-path-prefix miawbot --description "The MIAW bot community"
 
 After that, you'll still needing apply the necessary configurations like activation, publishing, etc, but that is it for now...
 
