@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <customParameters>
-        <externalParameterName>recordId</externalParameterName>
-        <masterLabel>recordId</masterLabel>
+        <externalParameterName>endUserId</externalParameterName>
+        <masterLabel>endUserId</masterLabel>
         <maxLength>25</maxLength>
-        <name>recordId</name>
+        <name>endUserId</name>
         <parameterDataType>String</parameterDataType>
     </customParameters>
     <customParameters>
@@ -12,6 +12,27 @@
         <masterLabel>externalTicketId</masterLabel>
         <maxLength>50</maxLength>
         <name>externalTicketId</name>
+        <parameterDataType>String</parameterDataType>
+    </customParameters>
+    <customParameters>
+        <externalParameterName>recordId</externalParameterName>
+        <masterLabel>recordId</masterLabel>
+        <maxLength>25</maxLength>
+        <name>recordId</name>
+        <parameterDataType>String</parameterDataType>
+    </customParameters>
+    <customParameters>
+        <externalParameterName>queueId</externalParameterName>
+        <masterLabel>queueId</masterLabel>
+        <maxLength>25</maxLength>
+        <name>queueId</name>
+        <parameterDataType>String</parameterDataType>
+    </customParameters>
+    <customParameters>
+        <externalParameterName>messagingChannelId</externalParameterName>
+        <masterLabel>messagingChannelId</masterLabel>
+        <maxLength>25</maxLength>
+        <name>messagingChannelId</name>
         <parameterDataType>String</parameterDataType>
     </customParameters>
     <masterLabel>MIAWPoc</masterLabel>

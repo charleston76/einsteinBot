@@ -47,7 +47,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>MIAW Agents Permission Set</label>
+    <label>MIAW Only Permission Set</label>
     <!-- <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>

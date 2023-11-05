@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>MIAWInternalTest</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
         <members>standard__LightningService</members>
         <name>CustomApplication</name>
     </types>
@@ -12,21 +16,28 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>MiawDirectPOC</members>
+        <name>EmbeddedServiceConfig</name>
+    </types>
+    <types>
         <members>Messaging_Session</members>
         <name>FlexiPage</name>
     </types>
-    <!-- types>
+    <types>
         <members>MIAWToQueue</members>
-        <members>Route_to_MIAW_Bot</members>
         <name>Flow</name>
     </types>
-    <types -->
+    <types>
         <members>MIAWPoc</members>
         <name>MessagingChannel</name>
     </types>
     <types>
         <members>Supervisor_Test</members>
         <name>OmniSupervisorConfig</name>
+    </types>
+    <types>
+        <members>MIAWPermissionSet</members>
+        <name>PermissionSet</name>
     </types>
     <types>
         <members>default_presence_config</members>
@@ -36,6 +47,10 @@
         <members>FallbackQueue</members>
         <members>MIAWQueue</members>
         <name>Queue</name>
+    </types>
+    <types>
+        <members>MIAW_Routing_Configuration</members>
+        <name>QueueRoutingConfig</name>
     </types>
     <types>
         <members>sfdc_liveagent</members>

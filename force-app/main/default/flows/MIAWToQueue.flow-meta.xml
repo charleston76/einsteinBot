@@ -4,7 +4,7 @@
         <name>New_Action</name>
         <label>New Action</label>
         <locationX>176</locationX>
-        <locationY>242</locationY>
+        <locationY>134</locationY>
         <actionName>routeWork</actionName>
         <actionType>routeWork</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -20,7 +20,7 @@
         <inputParameters>
             <name>serviceChannelId</name>
             <value>
-                <stringValue>0N96t000000CiTcCAK</stringValue>
+                <stringValue>0N98D000000096VSAQ</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -106,49 +106,40 @@
         </value>
     </processMetadataValues>
     <processType>RoutingFlow</processType>
-    <recordLookups>
-        <name>Get_Queue_ID</name>
-        <label>Get Queue ID</label>
-        <locationX>176</locationX>
-        <locationY>134</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>New_Action</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Type</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Queue</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>DeveloperName</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>MIAWQueue</stringValue>
-            </value>
-        </filters>
-        <object>Group</object>
-        <outputAssignments>
-            <assignToReference>queueId</assignToReference>
-            <field>Id</field>
-        </outputAssignments>
-    </recordLookups>
     <start>
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Queue_ID</targetReference>
+            <targetReference>New_Action</targetReference>
         </connector>
     </start>
     <status>Active</status>
     <variables>
+        <name>endUserId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>externalTicketId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>messagingChannelId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
         <name>queueId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
-        <isInput>false</isInput>
+        <isInput>true</isInput>
         <isOutput>false</isOutput>
     </variables>
     <variables>
