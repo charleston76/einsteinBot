@@ -1,36 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+<MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <customParameters>
-        <actionParameterMappings>
-            <actionParameterName>recordId</actionParameterName>
-        </actionParameterMappings>
         <externalParameterName>recordId</externalParameterName>
         <masterLabel>recordId</masterLabel>
         <maxLength>25</maxLength>
         <name>recordId</name>
         <parameterDataType>String</parameterDataType>
     </customParameters>
-    <masterLabel>MIAW POC</masterLabel>
+    <customParameters>
+        <externalParameterName>externalTicketId</externalParameterName>
+        <masterLabel>externalTicketId</masterLabel>
+        <maxLength>50</maxLength>
+        <name>externalTicketId</name>
+        <parameterDataType>String</parameterDataType>
+    </customParameters>
+    <masterLabel>MIAWPoc</masterLabel>
     <messagingChannelType>EmbeddedMessaging</messagingChannelType>
-    <sessionHandlerFlow>MIAWToQueue</sessionHandlerFlow>
-    <sessionHandlerQueue>FallbackQueue</sessionHandlerQueue>
-    <sessionHandlerType>Flow</sessionHandlerType>
-    <standardParameters>
-        <actionParameterMappings>
-            <actionParameterName>lastName</actionParameterName>
-        </actionParameterMappings>
-        <parameterType>LastName</parameterType>
-    </standardParameters>
-    <standardParameters>
-        <actionParameterMappings>
-            <actionParameterName>email</actionParameterName>
-        </actionParameterMappings>
-        <parameterType>Email</parameterType>
-    </standardParameters>
-    <standardParameters>
-        <actionParameterMappings>
-            <actionParameterName>firstName</actionParameterName>
-        </actionParameterMappings>
-        <parameterType>FirstName</parameterType>
-    </standardParameters>
+    <sessionHandlerQueue xsi:nil="true"/>
+    <sessionHandlerType xsi:nil="true"/>
 </MessagingChannel>

@@ -7,6 +7,27 @@ To make our lives easy, we can automate many things, putting the Salesforce CLI,
 
     ./scripts/bash/createScratchOrg.sh tmpBot
 
+### Deploy the necessary MIAW configuration
+
+sf project deploy start --ignore-conflicts --manifest manifest/package-Miaw.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Create a digital experience
 
 Yes, we'll not clear see that on the official cookbook, but you'll need that during the bot configuration, so... let's do that.

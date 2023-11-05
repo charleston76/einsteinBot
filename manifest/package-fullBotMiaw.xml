@@ -28,6 +28,7 @@
     </types>
     <types>
         <members>MessagingSession.Email__c</members>
+        <members>MessagingSession.ExternalTicketId__c</members>
         <members>MessagingSession.FirstName__c</members>
         <members>MessagingSession.LastName__c</members>
         <name>CustomField</name>
