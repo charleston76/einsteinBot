@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>GetOrderStatus</members>
+        <members>MessagingContactData</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
         <members>MIAWInternalTest</members>
         <name>ApexPage</name>
+    </types>
+    <types>
+        <members>MIAW_Bot</members>
+        <name>Bot</name>
     </types>
     <types>
         <members>standard__LightningService</members>
@@ -16,6 +25,14 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>BotOrder__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>BotOrder__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>MiawDirectPOC</members>
         <name>EmbeddedServiceConfig</name>
     </types>
@@ -25,6 +42,7 @@
     </types>
     <types>
         <members>MIAWToQueue</members>
+        <members>Route_to_MIAW_Bot</members>
         <name>Flow</name>
     </types>
     <types>
@@ -37,6 +55,7 @@
     </types>
     <types>
         <members>MIAWPermissionSet</members>
+        <members>sfdc_chatbot_service_permset</members>
         <name>PermissionSet</name>
     </types>
     <types>

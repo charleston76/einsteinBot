@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata">
     <customParameters>
         <externalParameterName>endUserId</externalParameterName>
         <masterLabel>endUserId</masterLabel>
@@ -37,6 +37,7 @@
     </customParameters>
     <masterLabel>MIAWPoc</masterLabel>
     <messagingChannelType>EmbeddedMessaging</messagingChannelType>
-    <sessionHandlerQueue xsi:nil="true"/>
-    <sessionHandlerType xsi:nil="true"/>
+    <sessionHandlerFlow>MIAWToQueue</sessionHandlerFlow>
+    <sessionHandlerQueue>FallbackQueue</sessionHandlerQueue>
+    <sessionHandlerType>Flow</sessionHandlerType>
 </MessagingChannel>
