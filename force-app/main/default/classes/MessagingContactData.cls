@@ -53,4 +53,3 @@ public class MessagingContactData {
         return outputs;
     }
 }
-

@@ -12,6 +12,16 @@
         <actionTab>AllAgents</actionTab>
         <displayOrder>1</displayOrder>
     </omniSupervisorConfigAction>
+    <omniSupervisorConfigAction>
+        <actionName>ManageQueues</actionName>
+        <actionTab>QueuesBacklog</actionTab>
+        <displayOrder>0</displayOrder>
+    </omniSupervisorConfigAction>
+    <omniSupervisorConfigAction>
+        <actionName>AssignLearning</actionName>
+        <actionTab>AllAgents</actionTab>
+        <displayOrder>2</displayOrder>
+    </omniSupervisorConfigAction>
     <omniSupervisorConfigProfile>
         <profile>admin</profile>
     </omniSupervisorConfigProfile>
