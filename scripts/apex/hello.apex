@@ -33,3 +33,7 @@ Params.put('recordId', '0Mw8D0000007HpRSAU');
 
 //create instance of Interview
 Flow.Interview.MIAWToQueue objFlow = new Flow.Interview.MIAWToQueue (Params);
+
+ConnectApi.
+ConnectApi.ConversationApplicationDefinition()
+ConnectApi.DirectMessageCapabilityInput

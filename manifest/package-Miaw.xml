@@ -42,6 +42,7 @@
     </types>
     <types>
         <members>Messaging_Session</members>
+        <members>Messaging_Session_Record_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>

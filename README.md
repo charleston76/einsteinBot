@@ -22,41 +22,6 @@ sf project deploy start --ignore-conflicts --manifest manifest/package-Miaw.xml
 1. Add the scrt2URL, created in the "Code Snippet" of the "Embedded Service Deployment" to CORS and CSP
 1. Add the visualforce page url to CORS
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Create a digital experience
-
-Yes, we'll not clear see that on the official cookbook, but you'll need that during the bot configuration, so... let's do that.
-
-You can do that out of the box... or execute the CLI:
-
-    Bash command:
-    sf community create --name 'MIAW Bot' --template-name 'Microsite (LWR)' --url-path-prefix miawbot --description 'The MIAW bot community'
-
-    Windows command:
-    sf community create --name "MIAW Bot" --template-name "Microsite (LWR)" --url-path-prefix miawbot --description "The MIAW bot community"
-
-After that, you'll still needing apply the necessary configurations like activation, publishing, etc, but that is it for now...
-
-And when the org and digital experience have been created, deploy the thing done before...
-
-    sf project deploy start --ignore-conflicts --manifest manifest/package.xml 
-
-
 ### Add some data 
 
 You can create some data on the BotOrder object using the code below.
@@ -109,6 +74,51 @@ You can create some data on the BotOrder object using the code below.
     }
 
     insert BotOrderList;
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Create a digital experience
+
+Yes, we'll not clear see that on the official cookbook, but you'll need that during the bot configuration, so... let's do that.
+
+You can do that out of the box... or execute the CLI:
+
+    Bash command:
+    sf community create --name 'MIAW Bot' --template-name 'Microsite (LWR)' --url-path-prefix miawbot --description 'The MIAW bot community'
+
+    Windows command:
+    sf community create --name "MIAW Bot" --template-name "Microsite (LWR)" --url-path-prefix miawbot --description "The MIAW bot community"
+
+After that, you'll still needing apply the necessary configurations like activation, publishing, etc, but that is it for now...
+
+And when the org and digital experience have been created, deploy the thing done before...
+
+    sf project deploy start --ignore-conflicts --manifest manifest/package.xml 
+
+
 
 
 
