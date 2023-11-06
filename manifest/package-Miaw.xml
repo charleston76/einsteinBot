@@ -29,6 +29,10 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>MiawChatSite</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
         <members>BotOrder__c</members>
         <name>CustomTab</name>
     </types>

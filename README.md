@@ -18,6 +18,7 @@ sf project deploy start --ignore-conflicts --manifest manifest/package-Miaw.xml
 1. Grant the user access with the MIAW Agents Permission Set
 <!-- sfdx force:user:permset:assign --perm-set-name MIAWAgentsPermissionSet --target-org tmpBot -->
 1. Add the presence status to the necessary profiles
+1. Add the Messaging for In-App and Web User permission set (did by the Company page)
 1. Add the scrt2URL, created in the "Code Snippet" of the "Embedded Service Deployment" to CORS and CSP
 1. Add the visualforce page url to CORS
 
