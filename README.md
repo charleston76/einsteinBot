@@ -4,6 +4,11 @@ Here you'll see a scratch org working with a simple MIAW implementation.
 
 ![Messaging Settings](images/MessagingSettings.png)
 
+### The official Salesforce Documentation
+
+1. [What’s Service Cloud Messaging?](https://help.salesforce.com/s/articleView?id=sf.messaging_introduction.htm&type=5)
+1. [What’s Messaging for In-App and Web?](https://help.salesforce.com/s/articleView?id=sf.reimagine_miaw.htm&type=5)
+1. [Considerations when Replacing Chat with Messaging for In-App and Web](https://help.salesforce.com/s/articleView?id=sf.miaw_replacing_chat_considerations.htm&type=5)
 
 ### Are you a little bit lost?
 
