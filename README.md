@@ -1,5 +1,8 @@
-# Einstein BOT
+# Messaging for In-App and Web - MIAW
 
+Here you'll see a scratch org working with a simple MIAW implementation.
+
+![Messaging Settings](images/MessagingSettings.png)
 
 ## Scratch org creation
 
@@ -16,17 +19,44 @@ sf project deploy start --ignore-conflicts --manifest manifest/package-Miaw.xml
 1. Create a service resource with your user;
 1. Add the "Omni-channel" in the utility items, of the Service Console app;
 1. Grant the user access with the MIAW Agents Permission Set
-<!-- sfdx force:user:permset:assign --perm-set-name MIAWAgentsPermissionSet --target-org tmpBot -->
 1. Add the presence status to the necessary profiles
 1. Add the Messaging for In-App and Web User permission set (did by the Company page)
 1. Add the scrt2URL, created in the "Code Snippet" of the "Embedded Service Deployment" to CORS and CSP
 1. Add the visualforce page url to CORS
 
+<!-- sfdx force:user:permset:assign --perm-set-name MIAWAgentsPermissionSet --target-org tmpBot -->
+
+## That's all (for now) folks
+
+I know, now you already have many things here:
+
+1. Service Cloud;
+1. Messaging Seetings;
+1. Omni-Channel;
+1. Queues;
+1. Omni flows to do the routing;
+1. Embedded Service Deployment;
+1. A visualforce page to test internaly;
+
+![Embedded Service Deployments](images/EmbeddedServiceDeployment.png)
+
+But that is just the start point, coming soon we'll talk about the Einstein Bots, stay tuned...
+
+<!-- 
+#################################################################################################################
+#
+#    SO, YOU CAN READ THE INFORMATION BELOW HERE, BUT PLEASE, BEAR IN MIND THAT IS A WORK IN PROGRESS...
+#    WITH THAT SAID, IS BETTER JUST IGNORE FOR NOW, AND SEE WHEN I HAVE THAT REALLY WORKING
+#
+#################################################################################################################
+-->
+
+<!-- 
 ### Add some data 
 
 You can create some data on the BotOrder object using the code below.
 
-<!-- SELECT Id, Name, Status__c, OrderDate__c, ContactId__c, Amount__c FROM BotOrder__c -->
+<!-- SELECT Id, Name, Status__c, OrderDate__c, ContactId__c, Amount__c FROM BotOrder__c -- >
 
     List<String> orderListNumber = new List<String>{
         'O-00123456',
@@ -218,7 +248,7 @@ This activation add the **sfdc.chatbot.service.permset** permission set  to your
 1. Click **Finish**.
 1. To activate your bot, click Activate.
 
-<!-- We'll not activate this bot now, but we'll get back here later... -->
+<!-- We'll not activate this bot now, but we'll get back here later... -- >
 
 ### Routing to the Bot
 
@@ -258,7 +288,7 @@ To question things....
 
 You can create some data on the BotOrder object using the code below
 
-<!-- SELECT Id, Name, Status__c, OrderDate__c, ContactId__c, Amount__c FROM BotOrder__c -->
+<!-- SELECT Id, Name, Status__c, OrderDate__c, ContactId__c, Amount__c FROM BotOrder__c -- >
 
 
 Let's query the data using a "OrderNumberString" (regular expression: \bO\-\d{8}\b) entity to understand the order pattern we have created above, and the "OrderNumber" variable.
@@ -334,4 +364,4 @@ Optimize Bot Flow with Embedded Chat
 
 
 
-![CMS done](images/b2bCMSImport4.png)
+![CMS done](images/b2bCMSImport4.png) -->

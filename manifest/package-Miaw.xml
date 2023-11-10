@@ -9,10 +9,10 @@
         <members>MIAWInternalTest</members>
         <name>ApexPage</name>
     </types>
-    <types>
+    <!-- types>
         <members>MIAW_Bot</members>
         <name>Bot</name>
-    </types>
+    </types -->
     <types>
         <members>standard__LightningService</members>
         <name>CustomApplication</name>
@@ -28,10 +28,10 @@
         <members>BotOrder__c</members>
         <name>CustomObject</name>
     </types>
-    <types>
+    <!-- types>
         <members>MiawChatSite</members>
         <name>CustomSite</name>
-    </types>
+    </types -->
     <types>
         <members>BotOrder__c</members>
         <name>CustomTab</name>
