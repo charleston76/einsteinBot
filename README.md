@@ -12,7 +12,7 @@ To make our lives easy, we can automate many things, putting the Salesforce CLI,
 
 ### Deploy the necessary MIAW configuration
 
-sf project deploy start --ignore-conflicts --manifest manifest/package-Miaw.xml
+    sf project deploy start --ignore-conflicts --manifest manifest/package-Miaw.xml
 
 ### Manual steps
 
@@ -41,6 +41,9 @@ I know, now you already have many things here:
 ![Embedded Service Deployments](images/EmbeddedServiceDeployment.png)
 
 But that is just the start point, coming soon we'll talk about the Einstein Bots, stay tuned...
+
+![Einstein Bots](images/EinsteinBots.png)
+
 
 <!-- 
 #################################################################################################################
