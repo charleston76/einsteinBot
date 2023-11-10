@@ -5,11 +5,13 @@ Here you'll see a scratch org working with a simple MIAW implementation.
 ![Messaging Settings](images/MessagingSettings.png)
 
 
-Are you a little bit lost?
+### Are you a little bit lost?
 
-Please, take a look on the **video demos** we have in the channel (better in playback speed 1.5)!
+Please, take a look on the **video demos** we have in the channel!
 
 [![Execution example](images/santosforceChannel.png)](https://www.youtube.com/@santosforce6170)
+
+So, let's get down to business
 
 ## Scratch org creation
 
