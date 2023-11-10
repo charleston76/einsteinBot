@@ -28,18 +28,18 @@
         <members>BotOrder__c</members>
         <name>CustomObject</name>
     </types>
-    <!-- types>
+    <types>
         <members>MiawChatSite</members>
         <name>CustomSite</name>
-    </types -->
+    </types>
     <types>
         <members>BotOrder__c</members>
         <name>CustomTab</name>
     </types>
-    <types>
+    <!-- types>
         <members>MiawDirectPOC</members>
         <name>EmbeddedServiceConfig</name>
-    </types>
+    </types -->
     <types>
         <members>Messaging_Session</members>
         <members>Messaging_Session_Record_Page</members>
