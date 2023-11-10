@@ -4,6 +4,13 @@ Here you'll see a scratch org working with a simple MIAW implementation.
 
 ![Messaging Settings](images/MessagingSettings.png)
 
+
+Are you a little bit lost?
+
+Please, take a look on the **video demos** we have in the channel (better in playback speed 1.5)!
+
+[![Execution example](images/santosforceChannel.png)](https://www.youtube.com/@santosforce6170)
+
 ## Scratch org creation
 
 To make our lives easy, we can automate many things, putting the Salesforce CLI, and the bash scripts to run together!
