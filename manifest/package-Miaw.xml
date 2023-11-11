@@ -25,10 +25,6 @@
         <name>CspTrustedSite</name>
     </types>
     <types>
-        <members>standard__LightningService</members>
-        <name>CustomApplication</name>
-    </types>
-    <types>
         <members>MessagingSession.Email__c</members>
         <members>MessagingSession.ExternalTicketId__c</members>
         <members>MessagingSession.FirstName__c</members>
