@@ -76,9 +76,6 @@ To make our lives easy, we can automate many things, putting the Salesforce CLI,
     To:
     * **page-business-46872-dev-ed**--c.scratch.vf.force.com/apex/MIAWInternalTest   
 
-You need to change from it 
-<!-- https://fun-data-18892-dev-ed--c.scratch.vf.force.com/apex/MIAWInternalTest -->
-
 Now, you can chat with yourself... but, that is just the preparation to let your agents chat with customers!
 
 
