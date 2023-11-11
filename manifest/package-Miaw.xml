@@ -9,10 +9,22 @@
         <members>MIAWInternalTest</members>
         <name>ApexPage</name>
     </types>
-    <!-- types>
-        <members>MIAW_Bot</members>
-        <name>Bot</name>
-    </types -->
+    <types>
+        <members>https_vf_force_com</members>
+        <members>https_scratch_com</members>
+        <members>https_scrt_com</members>
+        <members>https_sites_com</members>
+        <members>https_sites_com_two</members>
+        <name>CorsWhitelistOrigin</name>
+    </types>
+    <types>
+        <members>embedServiceBootstrap1</members>
+        <members>embedServiceBootstrap2</members>
+        <members>miawSite</members>
+        <members>scrt2URL</members>
+        <members>visualForce</members>
+        <name>CspTrustedSite</name>
+    </types>
     <types>
         <members>standard__LightningService</members>
         <name>CustomApplication</name>
@@ -36,13 +48,9 @@
         <members>BotOrder__c</members>
         <name>CustomTab</name>
     </types>
-    <!-- types>
-        <members>MiawDirectPOC</members>
-        <name>EmbeddedServiceConfig</name>
-    </types -->
     <types>
-        <members>Messaging_Session</members>
         <members>Messaging_Session_Record_Page</members>
+        <members>Messaging_Session</members>
         <name>FlexiPage</name>
     </types>
     <types>
