@@ -18,8 +18,7 @@
         <name>CorsWhitelistOrigin</name>
     </types>
     <types>
-        <members>embedServiceBootstrap1</members>
-        <members>embedServiceBootstrap2</members>
+        <members>embedServiceBootstrap</members>
         <members>miawSite</members>
         <members>scrt2URL</members>
         <members>visualForce</members>
@@ -39,10 +38,6 @@
     <types>
         <members>BotOrder__c</members>
         <name>CustomObject</name>
-    </types>
-    <types>
-        <members>MiawChatSite</members>
-        <name>CustomSite</name>
     </types>
     <types>
         <members>BotOrder__c</members>

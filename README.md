@@ -30,25 +30,39 @@ To make our lives easy, we can automate many things, putting the Salesforce CLI,
 
 ### Manual steps
 
-1. Create a service resource with your user;
+1. Activate the messagein setting created (MIAW);
 1. Add the "Omni-channel" in the utility items, of the Service Console app;
-1. Add the presence status to the necessary profiles
-1. Grant the user access with the Messaging for In-App and Web User permission set (done by the Company page)
-1. Create a new Embedded Service Deployments (MIAW)
-    1. Get the site domain (MiawChatSite)
-    1. Click in new New deployment
-    1. Be happy
-1. Add the scrt2URL, created in the "Code Snippet" of the "Embedded Service Deployment" to CORS and CSP
-1. Add the visualforce page url to CORS
+1. Add your user in the "MIAW Queue" queue;
+1. Add the presence status to the necessary profiles;
+1. Grant the user access with the Messaging for In-App and Web User permission set (done by the Company page);
+1. Create a new Embedded Service Deployments (MIAW):
+    1. Click in new New deployment;
+    1. As we'll test that in a visualforce page, as site you need to set "[YOUR SCRATCH]--c.scratch.vf.force.com";
+    1. Apply the configurations you want to;
+    1. Publish it;
+    1. Click on Instal Code Snippet and Copy to Clipboard;
+1. Configure the "MIAWInternalTest" visualforce page with the copied Code Snippet;
+1. Update all CSP (Trusted URLs) configuration to reflect your brand new scratch org;
+1. Edit the "MIAWToQueue" flow, to update the "serviceChannelId" of the environment;
+1. Create a service resource with your user;
 
-<!-- sfdx force:user:permset:assign --perm-set-name MIAWAgentsPermissionSet --target-org tmpBot -->
+### Check it out
+
+1. Access the Service Console and the Omni Supervisor 
+1. Let your user available
+1. Preview the "MIAWInternalTest" Visualforce Pages
+    * [YOUR SCRATCH]--c.scratch.vf.force.com/apex/MIAWInternalTest
+
+<!-- https://fun-data-18892-dev-ed--c.scratch.vf.force.com/apex/MIAWInternalTest -->
+
+Now, you can chat with yourself... but, that is just the preparation to let your agents chat with customers!
+
 
 ## That's all (for now) folks
 
 I know, now you already have many things here:
 
 1. Service Cloud;
-1. Custom site;
 1. Messaging Seetings;
 1. Omni-Channel;
 1. Queues;
