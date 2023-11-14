@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>MIAW_Bot</members>
+        <name>Bot</name>
+    </types>
+    <types>
+        <members>MessagingSession.Email__c</members>
+        <members>MessagingSession.ExternalTicketId__c</members>
+        <members>MessagingSession.FirstName__c</members>
+        <members>MessagingSession.LastName__c</members>
+        <name>CustomField</name>
+    </types>
+    <version>58.0</version>
+</Package>
