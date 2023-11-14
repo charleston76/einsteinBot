@@ -11,5 +11,9 @@
         <members>MessagingSession.LastName__c</members>
         <name>CustomField</name>
     </types>
+    <types>
+        <members>General_MIAW_Routing</members>
+        <name>Flow</name>
+    </types>
     <version>58.0</version>
 </Package>
