@@ -8,15 +8,15 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>UserIdentifier__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>ExternalTicketId__c</field>
             </layoutItems>
         </layoutColumns>
-        <!-- <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>isExternalInteraction__c</field>
-            </layoutItems>
-        </layoutColumns> -->
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -100,7 +100,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h04000002T3t7</masterLabel>
+        <masterLabel>00h8F000004FHMy</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

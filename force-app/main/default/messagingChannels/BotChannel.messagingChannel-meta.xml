@@ -2,6 +2,16 @@
 <MessagingChannel xmlns="http://soap.sforce.com/2006/04/metadata">
     <customParameters>
         <actionParameterMappings>
+            <actionParameterName>userIdentifier</actionParameterName>
+        </actionParameterMappings>
+        <externalParameterName>userIdentifier</externalParameterName>
+        <masterLabel>userIdentifier</masterLabel>
+        <maxLength>80</maxLength>
+        <name>userIdentifier</name>
+        <parameterDataType>String</parameterDataType>
+    </customParameters>
+    <customParameters>
+        <actionParameterMappings>
             <actionParameterName>externalTicketId</actionParameterName>
         </actionParameterMappings>
         <externalParameterName>externalTicketId</externalParameterName>

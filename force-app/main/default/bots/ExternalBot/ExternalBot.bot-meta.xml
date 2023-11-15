@@ -34,7 +34,7 @@
         <developerName>RoutableId</developerName>
         <label>Routable Id</label>
     </contextVariables>
-    <description>A bot from scratch.</description>
+    <description>A bot to do external and internal interactions</description>
     <label>ExternalBot</label>
     <logPrivateConversationData>false</logPrivateConversationData>
     <richContentEnabled>true</richContentEnabled>

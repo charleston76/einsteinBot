@@ -104,7 +104,7 @@ To the bot
 
 ### Deploy the necessary MIAW configuration
 
-    sf project deploy start --ignore-conflicts --manifest manifest/package-Miaw.xml
+    sf project deploy start --ignore-conflicts --manifest manifest/package-finalBot.xml
 
 ### Manual steps
 
@@ -118,6 +118,21 @@ To the bot
     ![Enhanced Conversation](images/EnhancedConversation.png)
 
 1. Grant the user access with the Messaging for In-App and Web User permission set (done by the Company page);
+1. Create a new Embedded Service Deployments (EmbededExternalBot):
+    1. Click in new New deployment;
+    1. As we'll test that in a visualforce page, as site you need to set "[YOUR SCRATCH]--c.scratch.vf.force.com";
+        For example, if you have this URL environment:
+        * https://**page-business-46872-dev-ed**.scratch.lightning.force.com
+
+        You need to change from:
+        * "[YOUR SCRATCH]--c.scratch.vf.force.com" 
+
+        To:
+        * **page-business-46872-dev-ed**--c.scratch.vf.force.com
+
+    1. Apply the configurations you want to;
+    1. Publish it;
+    1. Click on Instal Code Snippet and Copy to Clipboard;
 
 
 

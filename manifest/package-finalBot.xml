@@ -29,8 +29,8 @@
         <name>CspTrustedSite</name>
     </types>
     <types>
-        <members>MessagingSession.Email__c</members>
         <members>MessagingSession.ExternalTicketId__c</members>
+        <members>MessagingSession.UserIdentifier__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -40,6 +40,10 @@
     <types>
         <members>BotOrder__c</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>EmbededExternalBot</members>
+        <name>EmbeddedServiceConfig</name>
     </types>
     <types>
         <members>Messaging_Session_Record_Page</members>

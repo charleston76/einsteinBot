@@ -176,6 +176,16 @@
         <dialog>No_Agent_Available</dialog>
         <type>TransferFailed</type>
     </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>externalTicketId</developerName>
+        <label>externalTicketId</label>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <developerName>userIdentifier</developerName>
+        <label>userIdentifier</label>
+    </conversationVariables>
     <entryDialog>Welcome</entryDialog>
     <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
     <intentV3Enabled>true</intentV3Enabled>
