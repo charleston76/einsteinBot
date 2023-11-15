@@ -1,0 +1,21 @@
+<apex:page >
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'pt_BR'; // For example, enter 'en' or 'en-US'
+    
+                embeddedservice_bootstrap.init(
+                    '00D04000000pvcV',
+                    'Embeded_Chat_to_Bot',
+                    'https://platform-ruby-5346-dev-ed.scratch.my.site.com/ESWEmbededChattoBot1700065047943',
+                    {
+                        scrt2URL: 'https://platform-ruby-5346-dev-ed.scratch.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://platform-ruby-5346-dev-ed.scratch.my.site.com/ESWEmbededChattoBot1700065047943/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>    
+</apex:page>
