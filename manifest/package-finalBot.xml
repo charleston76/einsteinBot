@@ -13,7 +13,7 @@
         <name>EmbeddedServiceConfig</name>
     </types-->
     <types>
-        <members>Bot Routing</members>
+        <members>BotRouting</members>
         <name>Flow</name>
     </types>
     <!-- types>
