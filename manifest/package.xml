@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>BotInternalTest</members>
-        <name>ApexPage</name>
-    </types>
-    <types>
+    <!-- types>
         <members>MIAW_Bot</members>
         <name>Bot</name>
     </types>
@@ -15,24 +11,14 @@
     <types>
         <members>EmbededChatBot</members>
         <name>EmbeddedServiceConfig</name>
-    </types>
+    </types-->
     <types>
-        <members>General_MIAW_Routing</members>
+        <members>Bot Routing</members>
         <name>Flow</name>
     </types>
-    <types>
-        <members>MessagingSession-Messaging Session Layout</members>
-        <name>Layout</name>
-    </types>
-    <types>
-        <members>MessagingSession.All</members>
-        <members>MessagingSession.FallbackQueue_MessagingSession</members>
-        <members>MessagingSession.MIAWQueue_MessagingSession</members>
-        <name>ListView</name>
-    </types>
-    <types>
+    <!-- types>
         <members>BotChannel</members>
         <name>MessagingChannel</name>
-    </types>
+    </types -->
     <version>58.0</version>
 </Package>
