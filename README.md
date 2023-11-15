@@ -99,6 +99,29 @@ But that is just the start point, coming soon we'll talk about the Einstein Bots
 
 
 <!-- 
+
+To the bot
+
+### Deploy the necessary MIAW configuration
+
+    sf project deploy start --ignore-conflicts --manifest manifest/package-Miaw.xml
+
+### Manual steps
+
+1. Activate the messaging setting created (Bot Channel);
+1. Add the "Omni-channel" in the utility items, of the Service Console app;
+1. Add your user in the "MIAW Queue" queue;
+1. Add the presence status to the necessary profiles;
+1. Set the new "Messaging Session Record Page" as the default one;
+    * The reason to do that, is to use the "Enhanced Conversation" component;
+    * Otherwise, the messages will not appear to the agents;
+    ![Enhanced Conversation](images/EnhancedConversation.png)
+
+1. Grant the user access with the Messaging for In-App and Web User permission set (done by the Company page);
+
+
+
+
 #################################################################################################################
 #
 #    SO, YOU CAN READ THE INFORMATION BELOW HERE, BUT PLEASE, BEAR IN MIND THAT IS A WORK IN PROGRESS...

@@ -1,24 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <!-- types>
-        <members>MIAW_Bot</members>
+    <types>
+        <members>GetOrderStatus</members>
+        <members>MessagingContactData</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>BotInternalTest</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>ExternalBot</members>
         <name>Bot</name>
     </types>
     <types>
+        <members>https_scratch_com</members>
+        <members>https_scrt_com</members>
+        <members>https_sites_com_two</members>
+        <members>https_sites_com</members>
+        <members>https_vf_force_com</members>
+        <name>CorsWhitelistOrigin</name>
+    </types>
+    <types>
+        <members>embedServiceBootstrap</members>
+        <members>miawSite</members>
+        <members>scrt2URL</members>
+        <members>visualForce</members>
+        <name>CspTrustedSite</name>
+    </types>
+    <types>
+        <members>MessagingSession.Email__c</members>
         <members>MessagingSession.ExternalTicketId__c</members>
         <name>CustomField</name>
     </types>
     <types>
-        <members>EmbededChatBot</members>
-        <name>EmbeddedServiceConfig</name>
-    </types-->
+        <members>BotOrder__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>BotOrder__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Messaging_Session_Record_Page</members>
+        <members>Messaging_Session</members>
+        <name>FlexiPage</name>
+    </types>
     <types>
         <members>BotRouting</members>
         <name>Flow</name>
     </types>
-    <!-- types>
+    <types>
+        <members>MessagingSession-Messaging Session Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>MessagingSession.All</members>
+        <members>MessagingSession.FallbackQueue_MessagingSession</members>
+        <members>MessagingSession.MIAWQueue_MessagingSession</members>
+        <name>ListView</name>
+    </types>
+    <types>
         <members>BotChannel</members>
         <name>MessagingChannel</name>
-    </types -->
+    </types>
+    <types>
+        <members>Supervisor_Test</members>
+        <name>OmniSupervisorConfig</name>
+    </types>
+    <types>
+        <members>sfdc_chatbot_service_permset</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>default_presence_config</members>
+        <name>PresenceUserConfig</name>
+    </types>
+    <types>
+        <members>FallbackQueue</members>
+        <members>MIAWQueue</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>MIAW_Routing_Configuration</members>
+        <name>QueueRoutingConfig</name>
+    </types>
+    <types>
+        <members>sfdc_liveagent</members>
+        <members>sfdc_livemessage</members>
+        <name>ServiceChannel</name>
+    </types>
+    <types>
+        <members>Busy</members>
+        <members>Chat_Messaging</members>
+        <members>Chat</members>
+        <members>Messaging</members>
+        <name>ServicePresenceStatus</name>
+    </types>
+    <types>
+        <members>Bot</members>
+        <members>LiveAgent</members>
+        <members>OmniChannel</members>
+        <name>Settings</name>
+    </types>
     <version>58.0</version>
 </Package>
