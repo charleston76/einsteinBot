@@ -200,7 +200,7 @@
             <targetReference>External_Ticket_Id_verification</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <name>Normal_MIAW_Flow</name>
         <label>Normal MIAW Flow</label>
