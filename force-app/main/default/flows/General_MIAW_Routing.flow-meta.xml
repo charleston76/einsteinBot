@@ -1,34 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>59.0</apiVersion>
-    <decisions>
-        <name>External_Id_Verification</name>
-        <label>External Ticket Id Verification</label>
+    <actionCalls>
+        <description>Route the work to the bot</description>
+        <name>Miaw_Bot</name>
+        <label>Miaw Bot</label>
         <locationX>182</locationX>
-        <locationY>458</locationY>
-        <defaultConnectorLabel>Saved</defaultConnectorLabel>
-        <rules>
-            <name>The_external_Id_is_saved</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>externalTicketId</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <elementReference>Messaging_Session.ExternalTicketId__c</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>External_ID_Update</targetReference>
-            </connector>
-            <label>Not saved</label>
-        </rules>
-    </decisions>
+        <locationY>542</locationY>
+        <actionName>routeWork</actionName>
+        <actionType>routeWork</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>psrInteractionInfo</name>
+        </inputParameters>
+        <inputParameters>
+            <name>serviceChannelId</name>
+            <value>
+                <stringValue>0N90400000008MkCAI</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>serviceChannelLabel</name>
+            <value>
+                <stringValue>Messaging</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>serviceChannelDevName</name>
+            <value>
+                <stringValue>sfdc_livemessage</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>routingType</name>
+            <value>
+                <stringValue>Bot</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>routingConfigId</name>
+        </inputParameters>
+        <inputParameters>
+            <name>routingConfigLabel</name>
+        </inputParameters>
+        <inputParameters>
+            <name>queueId</name>
+            <value>
+                <stringValue>00G04000003Op5xEAC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>agentId</name>
+        </inputParameters>
+        <inputParameters>
+            <name>agentLabel</name>
+        </inputParameters>
+        <inputParameters>
+            <name>queueLabel</name>
+            <value>
+                <stringValue>MIAW Queue</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>skillOption</name>
+        </inputParameters>
+        <inputParameters>
+            <name>skillRequirementsResourceItem</name>
+        </inputParameters>
+        <inputParameters>
+            <name>botId</name>
+            <value>
+                <stringValue>0Xx040000008RcgCAE</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>botLabel</name>
+            <value>
+                <stringValue>MIAW Bot</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>isQueueVariable</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>routeWork</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
     <decisions>
         <name>External_Ticket_Id_verification</name>
         <label>External Ticket Id verification</label>
-        <locationX>380</locationX>
-        <locationY>350</locationY>
-        <defaultConnectorLabel>Not has external id</defaultConnectorLabel>
+        <locationX>336</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>Normal_MIAW_Flow</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No external ID</defaultConnectorLabel>
         <rules>
             <name>Has_external_id</name>
             <conditionLogic>and</conditionLogic>
@@ -37,29 +111,32 @@
                 <operator>NotEqualTo</operator>
             </conditions>
             <connector>
-                <targetReference>External_Id_Verification</targetReference>
+                <targetReference>Session_Id_Defined</targetReference>
             </connector>
             <label>Has external id</label>
         </rules>
     </decisions>
     <decisions>
-        <description>Checks if this call have a session id</description>
-        <name>Session_ID_verification</name>
-        <label>Session ID verification</label>
-        <locationX>611</locationX>
-        <locationY>134</locationY>
-        <defaultConnectorLabel>Not has session id</defaultConnectorLabel>
+        <description>Check if the Session Id is defined</description>
+        <name>Session_Id_Defined</name>
+        <label>Session Id Defined</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Miaw_Bot</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No record ID</defaultConnectorLabel>
         <rules>
-            <name>Has_session_id</name>
+            <name>Is_defined</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>recordId</leftValueReference>
                 <operator>NotEqualTo</operator>
             </conditions>
             <connector>
-                <targetReference>Messaging_Session</targetReference>
+                <targetReference>External_ID_Update</targetReference>
             </connector>
-            <label>Has session id</label>
+            <label>Is defined</label>
         </rules>
     </decisions>
     <description>Do the general routing identifying if the call are coming internally or externally and how to route them</description>
@@ -85,32 +162,14 @@
         </value>
     </processMetadataValues>
     <processType>RoutingFlow</processType>
-    <recordLookups>
-        <name>Messaging_Session</name>
-        <label>Messaging Session</label>
-        <locationX>380</locationX>
-        <locationY>242</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>External_Ticket_Id_verification</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>MessagingSession</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <recordUpdates>
         <name>External_ID_Update</name>
         <label>External ID Update</label>
         <locationX>50</locationX>
-        <locationY>566</locationY>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>Miaw_Bot</targetReference>
+        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -125,17 +184,37 @@
                 <elementReference>externalTicketId</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>isExternalInteraction__c</field>
+            <value>
+                <elementReference>isExternalInteraction</elementReference>
+            </value>
+        </inputAssignments>
         <object>MessagingSession</object>
     </recordUpdates>
     <runInMode>DefaultMode</runInMode>
     <start>
-        <locationX>485</locationX>
+        <locationX>210</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Session_ID_verification</targetReference>
+            <targetReference>External_Ticket_Id_verification</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
+    <subflows>
+        <name>Normal_MIAW_Flow</name>
+        <label>Normal MIAW Flow</label>
+        <locationX>490</locationX>
+        <locationY>242</locationY>
+        <flowName>MIAWToQueue</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
     <variables>
         <description>Defines the external ticket ID</description>
         <name>externalTicketId</name>

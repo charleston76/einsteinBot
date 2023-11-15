@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isExternalInteraction__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Show if the external is coming from external</description>
+    <externalId>false</externalId>
+    <label>External Interaction</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

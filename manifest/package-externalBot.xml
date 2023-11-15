@@ -8,12 +8,23 @@
         <members>MessagingSession.Email__c</members>
         <members>MessagingSession.ExternalTicketId__c</members>
         <members>MessagingSession.FirstName__c</members>
+        <members>MessagingSession.isExternalInteraction__c</members>
         <members>MessagingSession.LastName__c</members>
         <name>CustomField</name>
     </types>
     <types>
         <members>General_MIAW_Routing</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>MessagingSession-Messaging Session Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>MessagingSession.All</members>
+        <members>MessagingSession.FallbackQueue_MessagingSession</members>
+        <members>MessagingSession.MIAWQueue_MessagingSession</members>
+        <name>ListView</name>
     </types>
     <version>58.0</version>
 </Package>

@@ -25,15 +25,9 @@
 
 
 Map<String, Object> Params = new Map<String, Object>();
-Params.put('endUserId', '0038D00000JB3qwQAD');
-Params.put('externalTicketId', '1234567890');
-Params.put('messagingChannelId', '0Mj8D0000008Oa5SAE');
-Params.put('queueId', '00G8D0000034LtsUAE');
-Params.put('recordId', '0Mw8D0000007HpRSAU');
+Params.put('externalTicketId', '55778899');
+Params.put('recordId', '0Mw04000000ChMSCA0');
+Params.put('isExternalInteraction', true);
 
 //create instance of Interview
-Flow.Interview.MIAWToQueue objFlow = new Flow.Interview.MIAWToQueue (Params);
-
-ConnectApi.
-ConnectApi.ConversationApplicationDefinition()
-ConnectApi.DirectMessageCapabilityInput
+Flow.Interview.General_MIAW_Routing objFlow = new Flow.Interview.General_MIAW_Routing (Params);
