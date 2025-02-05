@@ -153,7 +153,6 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
-    <gender>Masculine</gender>
     <label>Bot Order</label>
     <nameField>
         <label>Order Number</label>
